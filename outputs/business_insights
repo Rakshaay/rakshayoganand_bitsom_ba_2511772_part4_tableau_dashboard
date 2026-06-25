@@ -1,0 +1,130 @@
+# Calculated Fields and Business Insights
+
+## Overview
+
+To enhance the analysis and support dashboard development, several calculated fields were created in Tableau. These fields provide additional business metrics related to profitability, customer behavior, returns, and shipping performance.
+
+---
+
+## 1. Profit Margin
+
+**Formula:**
+
+Profit / Sales
+
+**Purpose:**
+
+Profit Margin measures the percentage of sales revenue that is retained as profit after costs are accounted for.
+
+**Business Insight:**
+
+* Helps identify highly profitable products, categories, and regions.
+* Enables comparison of profitability across different sales volumes.
+* A high sales value does not necessarily indicate high profitability; profit margin provides a clearer picture of performance.
+
+---
+
+## 2. Cost
+
+**Formula:**
+
+Sales − Profit
+
+**Purpose:**
+
+Cost estimates the amount spent to generate the recorded sales revenue.
+
+**Business Insight:**
+
+* Helps evaluate operational efficiency.
+* Allows comparison between revenue and associated costs.
+* Useful for identifying products or segments with high expenses.
+
+---
+
+## 3. Average Order Value (AOV)
+
+**Formula:**
+
+SUM(Sales) / COUNTD(Order Id)
+
+**Purpose:**
+
+Average Order Value measures the average revenue generated per customer order.
+
+**Business Insight:**
+
+* Indicates customer purchasing behavior.
+* Higher AOV suggests customers are purchasing more products or higher-value products per transaction.
+* Useful for evaluating promotional campaigns and upselling opportunities.
+
+---
+
+## 4. Return Rate
+
+**Formula:**
+
+SUM(Return Flag) / COUNT(Order Id)
+
+**Purpose:**
+
+Return Rate measures the proportion of total orders that were returned.
+
+**Business Insight:**
+
+* Helps identify potential product quality or fulfillment issues.
+* High return rates may negatively affect profitability and customer satisfaction.
+* Useful for comparing return behavior across categories, regions, and customer segments.
+
+---
+
+## 5. Shipping Delay Bucket
+
+**Formula Logic:**
+
+* Fast (0–2 Days)
+* Normal (3–5 Days)
+* Delayed (6–8 Days)
+* Highly Delayed (9+ Days)
+
+**Purpose:**
+
+Groups delivery performance into meaningful categories for easier analysis.
+
+**Business Insight:**
+
+* Simplifies identification of shipping performance trends.
+* Helps determine whether delays impact sales, returns, or customer ratings.
+* Useful for monitoring logistics efficiency and service quality.
+
+---
+
+## Additional Calculated Fields
+
+### Discount Bucket
+
+**Purpose:**
+
+Groups discount levels into categories such as No Discount, Low Discount, Medium Discount, and High Discount.
+
+**Business Insight:**
+
+* Helps evaluate the impact of discounting on sales and profitability.
+* Supports promotional effectiveness analysis.
+
+### Profit Category
+
+**Purpose:**
+
+Classifies transactions as Profitable, Break Even, or Loss-Making.
+
+**Business Insight:**
+
+* Quickly identifies transactions generating losses.
+* Supports profitability analysis across products and customer segments.
+
+---
+
+## Summary
+
+The calculated fields transform raw transactional data into meaningful business metrics. These metrics provide insights into profitability, customer purchasing patterns, product returns, cost management, and delivery performance, enabling more effective business decision-making and dashboard analysis.
